@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/SecondSemProject_tst.dir/main.cpp.o -o SecondSemProject_tst  ../src/libSecondSemProject_lib.a ../lib/libgtestd.a -lpthread 

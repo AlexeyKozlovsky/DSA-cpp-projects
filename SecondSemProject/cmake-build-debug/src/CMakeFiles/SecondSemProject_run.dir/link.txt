@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/SecondSemProject_run.dir/main.cpp.o -o SecondSemProject_run 
