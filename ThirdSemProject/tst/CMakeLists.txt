@@ -1,0 +1,5 @@
+file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false *.cpp)
+set(SOURCES ${TEST_SOURCES})
+
+add_executable(${CMAKE_PROJECT_NAME}_tst ${TEST_SOURCES})
+target_link_libraries(${CMAKE_PROJECT_NAME}_tst PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
