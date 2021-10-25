@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/FifthSemProject_run.dir/Aggregate.cpp.o CMakeFiles/FifthSemProject_run.dir/Child.cpp.o CMakeFiles/FifthSemProject_run.dir/Test.cpp.o CMakeFiles/FifthSemProject_run.dir/main.cpp.o -o FifthSemProject_run 

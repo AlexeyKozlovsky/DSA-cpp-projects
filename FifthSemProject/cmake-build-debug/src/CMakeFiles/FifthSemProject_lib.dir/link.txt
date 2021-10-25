@@ -1,2 +1,0 @@
-/usr/bin/ar qc libFifthSemProject_lib.a CMakeFiles/FifthSemProject_lib.dir/Aggregate.cpp.o CMakeFiles/FifthSemProject_lib.dir/Child.cpp.o CMakeFiles/FifthSemProject_lib.dir/Test.cpp.o CMakeFiles/FifthSemProject_lib.dir/main.cpp.o
-/usr/bin/ranlib libFifthSemProject_lib.a
