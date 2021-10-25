@@ -1,0 +1,6 @@
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/src/CMakeFiles/FifthSemProject_lib.dir
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/FifthSemProject/cmake-build-debug/src/CMakeFiles/FifthSemProject_run.dir

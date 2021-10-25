@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/FifthSemProject.dir/main.cpp.o -o FifthSemProject 
