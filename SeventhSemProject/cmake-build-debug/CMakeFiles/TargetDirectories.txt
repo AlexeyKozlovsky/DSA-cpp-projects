@@ -1,6 +1,0 @@
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/src/CMakeFiles/SeventhSemProject_lib.dir
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SeventhSemProject/cmake-build-debug/src/CMakeFiles/SeventhSemProject_run.dir
