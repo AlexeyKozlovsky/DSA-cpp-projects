@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/SixthASemProject_run.dir/main.cpp.o -o SixthASemProject_run 

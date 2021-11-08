@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/SixthBSemProject_run.dir/main.cpp.o -o SixthBSemProject_run 

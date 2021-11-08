@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/include/BadCharTable.h
+list
+-
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/include/Searcher.h
+list
+-
+cstring
+-
+BadCharTable.h
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/include/BadCharTable.h
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/src/main.cpp
+iostream
+-
+list
+-
+../include/BadCharTable.h
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/include/BadCharTable.h
+../include/Searcher.h
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthBSemProject/include/Searcher.h
+

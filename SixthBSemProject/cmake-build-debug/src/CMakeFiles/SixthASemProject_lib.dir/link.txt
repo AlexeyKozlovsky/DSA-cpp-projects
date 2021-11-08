@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSixthASemProject_lib.a CMakeFiles/SixthASemProject_lib.dir/main.cpp.o
+/usr/bin/ranlib libSixthASemProject_lib.a

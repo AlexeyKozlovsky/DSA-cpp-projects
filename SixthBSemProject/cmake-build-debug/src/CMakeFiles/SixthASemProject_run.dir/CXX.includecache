@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthAProject/include/Str.hpp
+cstring
+-
+ostream
+-
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthAProject/src/main.cpp
+iostream
+-
+../include/Str.hpp
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/SixthAProject/include/Str.hpp
+
