@@ -1,0 +1,10 @@
+#ifndef FINALPROJECT_ADDRESS_H
+#define FINALPROJECT_ADDRESS_H
+
+
+class Address {
+
+};
+
+
+#endif //FINALPROJECT_ADDRESS_H
