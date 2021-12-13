@@ -14,9 +14,9 @@ private:
 
     UserManager() = default;
 public:
-    void parseFromJson(QString jsonPath) override {};
-    Data * getByName(QString name) override {};
-    void deleteByName(QString name) override {};
+    void parseFromJson(QString jsonPath) override;
+    Data * getByName(QString name) override;
+    void deleteByName(QString name) override;
     static UserManager *GetInstance() {
         if (UserManager::userManager_ == nullptr)
             UserManager::userManager_ = new UserManager();

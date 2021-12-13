@@ -5,12 +5,15 @@
 #include <QDebug>
 
 #include "Data.h"
+#include "User.h"
 #include "Place.h"
 #include "Hotel.h"
 #include "PlaceTypes.h"
 #include "PlaceManager.h"
 #include "HotelManager.h"
 #include "RouteManager.h"
+#include "TourManager.h"
+#include "UserManager.h"
 
 
 int main(int argc, char *argv[]) {
@@ -31,9 +34,13 @@ int main(int argc, char *argv[]) {
     PlaceManager *placeManager = PlaceManager::GetInstance();
     HotelManager *hotelManager = HotelManager::GetInstance();
     RouteManager *routeManager = RouteManager::GetInstance();
+    TourManager *tourManager = TourManager::GetInstance();
+    UserManager *userManager = UserManager::GetInstance();
     placeManager->parseFromJson("../resources/cities.json");
     hotelManager->parseFromJson("../resources/hotels.json");
     routeManager->parseFromJson("../resources/routes.json");
+    tourManager->parseFromJson("../resources/tours.json");
+    userManager->parseFromJson("../resources/users.json");
 
 
 //    Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");

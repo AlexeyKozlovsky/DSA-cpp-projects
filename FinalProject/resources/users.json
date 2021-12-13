@@ -1,11 +1,10 @@
-[{
+{"users": [{
   "firstName": "Иван",
   "secondName": "Иванов",
   "patronymic": "Иванович",
   "phone": "89825243434",
   "email": "asdsa@asd.com",
   "password": "123214",
-  "token": "1232143",
   "address": {
     "city": {
       "name": "Москва",
@@ -51,7 +50,6 @@
     "phone": "89842342322",
     "email": "dsflkj@as.com",
     "password": "123454232",
-    "token": "432432",
     "address": {
       "city": {
         "name": "Лондон",
@@ -74,7 +72,6 @@
     "phone": "8999213232232",
     "email": "agfgg@gmail.com",
     "password": "121321432",
-    "token": "12324324",
     "address": {
       "city": {
         "name": "Магадан",
@@ -97,7 +94,6 @@
     "phone": "89883433333",
     "email": "dfdf@gmail.com",
     "password": "dsfdsfds",
-    "token": "12321321",
     "address": {
       "city": {
         "name": "Нижний Новгород",
@@ -120,7 +116,6 @@
     "phone": "89992222222",
     "email": "13213@gmail.com",
     "password": "132121321",
-    "token": "123213213",
     "address": {
       "city": {
         "name": "Дубна",
@@ -135,4 +130,4 @@
       "streetName": "Макаренко",
       "house": "20"
     }
-  }]
+  }]}

@@ -41,7 +41,13 @@ Data *RouteManager::createRoute(QString name, QString description, std::vector<s
 
 
 Data *RouteManager::getByName(QString name) {
-    return nullptr;
+    std::set<Data *>::iterator routeIter = std::find_if(this->resources.begin(), this->resources.end(),
+                                                        [&](const Data *data) {
+        return ((Route *)data)->name == name;
+    });
+
+    if (routeIter == this->resources.end()) return nullptr;
+    return *routeIter;
 }
 
 void RouteManager::deleteByName(QString name) {

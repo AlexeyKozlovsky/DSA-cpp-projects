@@ -3,7 +3,8 @@
 
 #include <map>
 #include <set>
-#include <ctime>
+
+#include <QDate>
 
 #include "RoomTypes.h"
 #include "User.h"
@@ -11,13 +12,13 @@
 class Room {
 private:
     RoomTypes roomType;
-    std::map<std::time_t, std::set<User*>> schedule;
+    std::map<QDate, std::set<User*>> schedule;
     double price;
 
 public:
     Room(RoomTypes roomType, double price);
 
-    inline std::map<std::time_t, std::set<User*>> getSchedule() const {
+    inline std::map<QDate, std::set<User*>> getSchedule() const {
        return this->schedule;
     };
 
@@ -25,9 +26,9 @@ public:
         return this->price;
     }
 
-    void setSchedule(std::map<std::time_t, std::set<User*>> schedule);
+    void setSchedule(std::map<QDate, std::set<User*>> schedule);
 
-    void order(User *user, std::time_t ordered_time);
+    void order(User *user, QDate ordered_time);
 };
 
 
