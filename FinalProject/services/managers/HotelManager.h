@@ -19,7 +19,7 @@ public:
     }
 
     Data *createHotel(QString name, QString description, Address *address, int roomsCount);
-    Data *createHotel(QString name, QString description, Address *address, std::vector<Room*> rooms);
+    Data *createHotel(QString name, QString description, Address *address, std::vector<Room> rooms);
 
     void parseFromJson(QString jsonPath) override;
     Data* getByName(QString name) override;

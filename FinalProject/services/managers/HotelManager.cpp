@@ -109,7 +109,7 @@ Data *HotelManager::createHotel(QString name, QString description, Address *addr
     return hotel;
 }
 
-Data *HotelManager::createHotel(QString name, QString description, Address *address, std::vector<Room*> rooms) {
+Data *HotelManager::createHotel(QString name, QString description, Address *address, std::vector<Room> rooms) {
     Hotel *hotel = new Hotel(name, description, address, rooms);
     this->addResource(hotel);
     return hotel;

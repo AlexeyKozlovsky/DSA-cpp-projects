@@ -20,7 +20,7 @@ private:
     std::vector<Room> rooms;
 
     Hotel(QString name, QString description, Address *address, int roomsCount);
-    Hotel(QString name, QString description, Address *address, std::vector<Room*> rooms);
+    Hotel(QString name, QString description, Address *address, std::vector<Room> rooms);
 
 public:
     inline bool operator ==(const Hotel &hotel) const {
