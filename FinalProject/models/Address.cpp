@@ -1,5 +1,23 @@
-//
-// Created by alexeykozlovsky on 06.12.2021.
-//
+#include <QString>
+#include "Address.h"
 
-#include "address.h"
+
+QString Address::getStringAddress() {
+    return QString();
+}
+
+Address::Address(QString cityName) {
+
+}
+
+Address::Address(Place *country) {
+
+}
+
+Address::Address(QString cityName, QString streetName, QString house) {
+
+}
+
+Address::Address(Place *city, QString streetName, QString house) {
+
+}

@@ -1,5 +1,15 @@
-//
-// Created by alexeykozlovsky on 06.12.2021.
-//
-
 #include "Singleton.h"
+
+Singleton* Singleton::singleton_= nullptr;
+
+Singleton *Singleton::GetInstance()
+{
+    if(singleton_==nullptr){
+        singleton_ = new Singleton();
+    }
+    return singleton_;
+}
+
+Singleton::Singleton() {
+
+}

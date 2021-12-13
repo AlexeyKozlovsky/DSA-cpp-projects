@@ -1,0 +1,108 @@
+[{
+  "name": "Тильт отель",
+  "description": "",
+  "address": {
+    "country": {
+      "name": "Россия",
+      "description": "",
+      "location": []
+    },
+    "city": {
+      "name": "Дубна",
+      "description": "",
+      "location": []
+    },
+    "streetName": "Молодежная",
+    "house": "10"
+  }
+},
+  {
+    "name": "Тильт отель 2",
+    "description": "",
+    "address": {
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "city": {
+        "name": "Москва",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Тверская",
+      "house": "11"
+    }
+  },
+  {
+    "name": "Отель тильта",
+    "description": "",
+    "address": {
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "city": {
+        "name": "Рязань",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Маяковского",
+      "house": "2"
+    }
+  },
+  {
+    "name": "Отель европейский",
+    "description": "",
+    "address": {
+      "country": {
+        "name": "Германия",
+        "description": "",
+        "location": []
+      },
+      "city": {
+        "name": "Берлин",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Бергер",
+      "house": "2"
+    }
+  },
+  {
+    "name": "Отель европы",
+    "description": "",
+    "address": {
+      "country": {
+        "name": "Франция",
+        "description": "",
+        "location": []
+      },
+      "city": {
+        "name": "Париж",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Жакжана",
+      "house": "3"
+    }
+  },
+  {
+    "name": "Отель ЧСВ",
+    "description": "",
+    "address": {
+      "country": {
+        "name": "Великобритания",
+        "description": "",
+        "location": []
+      },
+      "city": {
+        "name": "Лондон",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Бигбена",
+      "house": "10"
+    }
+  }]

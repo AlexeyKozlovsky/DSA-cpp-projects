@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Маршрут 1",
+    "description": "",
+    "places": [{
+      "name": "Дубна",
+      "description": "",
+      "location": []
+    },
+      {
+        "name": "Москва",
+        "description": "",
+        "location": []
+      },
+      {
+        "name": "Санкт Петербург",
+        "description": "",
+        "location": []
+      },
+      {
+        "name": "Берлин",
+        "description": "",
+        "location": []
+      },
+      {
+        "name": "Париж",
+        "description": "",
+        "location": []
+      },
+      {
+        "name": "Кошeцы"
+      }]
+  }
+]

@@ -1,5 +1,9 @@
-//
-// Created by alexeykozlovsky on 06.12.2021.
-//
-
 #include "Route.h"
+
+Route::Route(QString name, QString description, std::vector<Hotel *> hotels) {
+
+}
+
+Route::Route(QString name, QString description, std::vector<Place *> places) {
+
+}

@@ -1,0 +1,138 @@
+[{
+  "firstName": "Иван",
+  "secondName": "Иванов",
+  "patronymic": "Иванович",
+  "phone": "89825243434",
+  "email": "asdsa@asd.com",
+  "password": "123214",
+  "token": "1232143",
+  "address": {
+    "city": {
+      "name": "Москва",
+      "description": "",
+      "location": []
+    },
+    "country": {
+      "name": "Россия",
+      "description": "",
+      "location": []
+    },
+    "streetName": "Тверская",
+    "house": "10"
+  }
+},
+  {
+    "firstName": "Петр",
+    "secondName": "Петров",
+    "patronymic": "Петрович",
+    "phone": "89842324244",
+    "email": "asd@asd.com",
+    "password": "12432432",
+    "token": "214424",
+    "address": {
+      "city": {
+        "name": "Рязань",
+        "description": "",
+        "location": []
+      },
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Маяковского",
+      "house": "13"
+    }
+  },
+  {
+    "firstName": "Федор",
+    "secondName": "Иванов",
+    "patronymic": "Станиславович",
+    "phone": "89842342322",
+    "email": "dsflkj@as.com",
+    "password": "123454232",
+    "token": "432432",
+    "address": {
+      "city": {
+        "name": "Лондон",
+        "description": "",
+        "location": []
+      },
+      "country": {
+        "name": "Великобритания",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Бэйкер стрит",
+      "house": "2"
+    }
+  },
+  {
+    "firstName": "Филимон",
+    "secondName": "Фокс",
+    "patronymic": "Акакиевич",
+    "phone": "8999213232232",
+    "email": "agfgg@gmail.com",
+    "password": "121321432",
+    "token": "12324324",
+    "address": {
+      "city": {
+        "name": "Магадан",
+        "description": "",
+        "location": []
+      },
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Первомайская",
+      "house": "43"
+    }
+  },
+  {
+    "firstName": "Станислав",
+    "secondName": "Федорович",
+    "patronymic": "Эннесов",
+    "phone": "89883433333",
+    "email": "dfdf@gmail.com",
+    "password": "dsfdsfds",
+    "token": "12321321",
+    "address": {
+      "city": {
+        "name": "Нижний Новгород",
+        "description": "",
+        "location": []
+      },
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Ленина",
+      "house": "60"
+    }
+  },
+  {
+    "firstName": "Карп",
+    "secondName": "Тильт",
+    "patronymic": "Тильтович",
+    "phone": "89992222222",
+    "email": "13213@gmail.com",
+    "password": "132121321",
+    "token": "123213213",
+    "address": {
+      "city": {
+        "name": "Дубна",
+        "description": "",
+        "location": []
+      },
+      "country": {
+        "name": "Россия",
+        "description": "",
+        "location": []
+      },
+      "streetName": "Макаренко",
+      "house": "20"
+    }
+  }]
