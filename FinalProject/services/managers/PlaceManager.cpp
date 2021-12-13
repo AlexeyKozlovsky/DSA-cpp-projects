@@ -65,6 +65,8 @@ void PlaceManager::parseFromJson(QString jsonPath) {
         Place *currentCity = new Place(name, description, location, PlaceTypes::City);
 
         QJsonObject countryObj = v.toObject().value("country").toObject();
+
+        if (countryObj.isEmpty()) continue;
         QString countryName = countryObj.value("name").toString();
         QString countryDescription = countryObj.value("description").toString();
 
@@ -83,27 +85,85 @@ void PlaceManager::parseFromJson(QString jsonPath) {
     }
 }
 
+Data *PlaceManager::getPlaceByName(QString name) {
+    std::set<Data *>::iterator resultIter = std::find_if(this->resources.begin(), this->resources.end(),
+                                                         [&](const Data *data) {
+        return ((Place *)data)->name.toLower() == name.toLower();
+    });
+    return *resultIter;
+}
+
 std::set<Data *> PlaceManager::getPlacesByName(QString name) {
     std::set<Data *> resultSet;
     std::copy_if(this->resources.begin(), this->resources.end(),
                  std::inserter(resultSet, resultSet.end()),
-                 [&](const Data *data) {return ((Place *)data)->name == name;});
+                 [&](const Data *data) {return ((Place *)data)->name.toLower() == name.toLower();});
     return resultSet;
 }
 
 std::set<Data *> PlaceManager::getPlacesByType(PlaceTypes placeType) {
-    return std::set<Data *>();
+    std::set<Data *> resultSet;
+    std::copy_if(this->resources.begin(), this->resources.end(),
+                 std::inserter(resultSet, resultSet.end()),
+                 [&](const Data *data) {return ((Place *)data)->placeType == placeType;});
+    return resultSet;
 }
 
 std::set<Data *> PlaceManager::getPlacesByLocation(double altitude, double longitude, double radius) {
-    return std::set<Data *>();
+    std::set<Data *> resultSet;
+    std::copy_if(this->resources.begin(), this->resources.end(),
+                 std::inserter(resultSet, resultSet.end()),
+                 [&](const Data *data) {
+        Place *place = (Place *)data;
+        if ((place->location.first <= altitude + radius && place->location.first >= altitude - radius) &&
+                (place->location.second <= longitude + radius && place->location.second >= longitude - radius))
+            return true;
+        return false;
+    });
+    return resultSet;
 }
 
 std::set<Data *> PlaceManager::getPlacesByLocation(std::pair<double, double> location, double radius) {
-    return std::set<Data *>();
+    return this->getPlacesByLocation(location.first, location.second, radius);
 }
 
 std::set<Data *> PlaceManager::getPlacesByLocation(Data *centerPlace, double radius) {
-    return std::set<Data *>();
+    std::pair<double, double> location = ((Place *)centerPlace)->location;
+    if (location.first || location.second)
+        return this->getPlacesByLocation(location, radius);
+    return {};
 }
+
+std::set<Data *> PlaceManager::getLocatedPlaces() {
+    std::set<Data *> resultSet;
+    std::copy_if(this->resources.begin(), this->resources.end(),
+                 std::inserter(resultSet, resultSet.end()),
+                 [&](const Data *data) {
+        std::pair<double, double> location = ((Place *)data)->location;
+        if (location.first || location.second) return true;
+        return false;
+    });
+    return resultSet;
+}
+
+std::set<Data *> PlaceManager::getCitiesByCountry(QString countryName) {
+    std::set<Data *> resultSet;
+    std::copy_if(this->resources.begin(), this->resources.end(),
+                 std::inserter(resultSet, resultSet.end()),
+                 [&](const Data *data){
+        if (!((Place *)data)->parentPlace) return false;
+        QString currentName = ((Place *)data)->parentPlace->name;
+        if (currentName.toLower() == countryName.toLower()) return true;
+        return false;
+    });
+    return resultSet;
+}
+
+std::set<Data *> PlaceManager::getCitiesByCountry(Data *country) {
+    return this->getCitiesByCountry(((Place *)country)->name);
+}
+
+
+
+
 

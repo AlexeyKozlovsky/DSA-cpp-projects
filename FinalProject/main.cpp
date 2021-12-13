@@ -28,19 +28,21 @@ int main(int argc, char *argv[]) {
     PlaceManager *placeManager = PlaceManager::GetInstance();
     placeManager->parseFromJson("../resources/cities.json");
 
-    std::set<Data *> places = placeManager->getResources();
 
-    Place *place = (Place *) *places.begin();
-    qDebug() << place->getName();
-    qDebug() << place->getDescription();
-    qDebug() << place->getLocation();
+    Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");
+//    qDebug() << foundPlace->getName();
+//    qDebug() << foundPlace->getDescription();
+//    qDebug() << foundPlace->getLocation();
 
-    PlaceTypes type = place->getPlaceType();
-    if (type == PlaceTypes::City) qDebug() << "City!";
-    else if (type == PlaceTypes::Country) qDebug() << "Country";
+    std::set<Data *> radiusedPlaces = placeManager->getPlacesByLocation(10000, 10000, 0.1);
+    std::set<Data *> russianCities = placeManager->getCitiesByCountry("Российская Федерация");
 
-
-    std::set<Data *> result = placeManager->getPlacesByName("Босния");
-
+    for (std::set<Data *>::iterator it = russianCities.begin(); it != russianCities.end(); it++) {
+        qDebug() << ((Place *)*it)->getName();
+        qDebug() << ((Place *)*it)->getDescription();
+        qDebug() << ((Place *)*it)->getLocation();
+    }
+    qDebug() << radiusedPlaces.size();
+    qDebug() << russianCities.size();
     return QApplication::exec();
 }

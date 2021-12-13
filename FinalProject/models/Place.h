@@ -17,7 +17,7 @@ protected:
     QString description;
     PlaceTypes placeType;
 
-    Place *parentPlace;
+    Place *parentPlace = nullptr;
 
     Place(QString name, QString description, std::pair<double, double> location, Place *parentPlace = nullptr);
     Place(QString name, QString description, std::pair<double, double> location, PlaceTypes placeType,

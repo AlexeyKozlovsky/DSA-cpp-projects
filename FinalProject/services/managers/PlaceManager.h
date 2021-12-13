@@ -29,11 +29,16 @@ public:
     Data *createPlace(QString name, QString description, std::pair<double, double> location, QString placeType);
 
 
+    Data *getPlaceByName(QString name);
     std::set<Data *> getPlacesByName(QString name);
     std::set<Data *> getPlacesByType(PlaceTypes placeType);
     std::set<Data *> getPlacesByLocation(double altitude, double longitude, double radius);
     std::set<Data *> getPlacesByLocation(std::pair<double, double> location, double radius);
     std::set<Data *> getPlacesByLocation(Data *centerPlace, double radius);
+
+    std::set<Data *> getLocatedPlaces();
+    std::set<Data *> getCitiesByCountry(QString countryName);
+    std::set<Data *> getCitiesByCountry(Data *country);
 };
 
 
