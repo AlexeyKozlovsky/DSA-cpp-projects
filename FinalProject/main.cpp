@@ -6,8 +6,10 @@
 
 #include "Data.h"
 #include "Place.h"
+#include "Hotel.h"
 #include "PlaceTypes.h"
 #include "PlaceManager.h"
+#include "HotelManager.h"
 
 
 int main(int argc, char *argv[]) {
@@ -26,7 +28,9 @@ int main(int argc, char *argv[]) {
 
 
     PlaceManager *placeManager = PlaceManager::GetInstance();
+    HotelManager *hotelManager = HotelManager::GetInstance();
     placeManager->parseFromJson("../resources/cities.json");
+    hotelManager->parseFromJson("../resources/hotels.json");
 
 
     Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");
@@ -34,15 +38,8 @@ int main(int argc, char *argv[]) {
 //    qDebug() << foundPlace->getDescription();
 //    qDebug() << foundPlace->getLocation();
 
-    std::set<Data *> radiusedPlaces = placeManager->getPlacesByLocation(10000, 10000, 0.1);
-    std::set<Data *> russianCities = placeManager->getCitiesByCountry("Российская Федерация");
+//    std::set<Data *> radiusedPlaces = placeManager->getPlacesByLocation(10000, 10000, 0.1);
+//    std::set<Data *> russianCities = placeManager->getCitiesByCountry("Российская Федерация");
 
-    for (std::set<Data *>::iterator it = russianCities.begin(); it != russianCities.end(); it++) {
-        qDebug() << ((Place *)*it)->getName();
-        qDebug() << ((Place *)*it)->getDescription();
-        qDebug() << ((Place *)*it)->getLocation();
-    }
-    qDebug() << radiusedPlaces.size();
-    qDebug() << russianCities.size();
     return QApplication::exec();
 }

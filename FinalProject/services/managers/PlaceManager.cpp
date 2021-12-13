@@ -18,6 +18,13 @@
 
 PlaceManager* PlaceManager::placeManager_ = nullptr;
 
+Data *PlaceManager::createPlace(QString name, QString description, std::pair<double, double> location, PlaceTypes placeType) {
+    Place *place = new Place(name, description, location);
+    place->placeType = placeType;
+    this->addResource(place);
+    return place;
+}
+
 Data *PlaceManager::createPlace(QString name, QString description, std::pair<double, double> location, QString placeType) {
     Place *place = new Place(name, description, location);
     if (placeType.toLower() == "city")
@@ -93,6 +100,16 @@ Data *PlaceManager::getPlaceByName(QString name) {
     return *resultIter;
 }
 
+Data *PlaceManager::getPlaceByName(QString name, PlaceTypes placeType) {
+    std::set<Data *>::iterator resultIter = std::find_if(this->resources.begin(), this->resources.end(),
+                                                          [&](const Data *data){
+        return ((Place *)data)->name.toLower() == name.toLower() &&
+                ((Place *)data)->placeType == placeType;
+    });
+    if (resultIter == this->resources.end()) return nullptr;
+    return *resultIter;
+}
+
 std::set<Data *> PlaceManager::getPlacesByName(QString name) {
     std::set<Data *> resultSet;
     std::copy_if(this->resources.begin(), this->resources.end(),
@@ -162,8 +179,3 @@ std::set<Data *> PlaceManager::getCitiesByCountry(QString countryName) {
 std::set<Data *> PlaceManager::getCitiesByCountry(Data *country) {
     return this->getCitiesByCountry(((Place *)country)->name);
 }
-
-
-
-
-

@@ -27,9 +27,11 @@ public:
     void parseFromJson(QString jsonPath) override;
 
     Data *createPlace(QString name, QString description, std::pair<double, double> location, QString placeType);
+    Data *createPlace(QString name, QString description, std::pair<double, double> location, PlaceTypes placeType);
 
 
     Data *getPlaceByName(QString name);
+    Data *getPlaceByName(QString name, PlaceTypes placeType);
     std::set<Data *> getPlacesByName(QString name);
     std::set<Data *> getPlacesByType(PlaceTypes placeType);
     std::set<Data *> getPlacesByLocation(double altitude, double longitude, double radius);

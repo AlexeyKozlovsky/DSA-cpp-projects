@@ -1,6 +1,6 @@
-[{
+{"hotels": [{
   "name": "Тильт отель",
-  "description": "",
+  "description": "Тиильт",
   "address": {
     "country": {
       "name": "Россия",
@@ -14,7 +14,8 @@
     },
     "streetName": "Молодежная",
     "house": "10"
-  }
+  },
+  "roomsCount": 200
 },
   {
     "name": "Тильт отель 2",
@@ -32,7 +33,8 @@
       },
       "streetName": "Тверская",
       "house": "11"
-    }
+    },
+    "roomsCount": 200
   },
   {
     "name": "Отель тильта",
@@ -50,7 +52,8 @@
       },
       "streetName": "Маяковского",
       "house": "2"
-    }
+    },
+    "roomsCount": 200
   },
   {
     "name": "Отель европейский",
@@ -68,7 +71,8 @@
       },
       "streetName": "Бергер",
       "house": "2"
-    }
+    },
+    "roomsCount": 200
   },
   {
     "name": "Отель европы",
@@ -86,7 +90,8 @@
       },
       "streetName": "Жакжана",
       "house": "3"
-    }
+    },
+    "roomsCount": 200
   },
   {
     "name": "Отель ЧСВ",
@@ -104,5 +109,6 @@
       },
       "streetName": "Бигбена",
       "house": "10"
-    }
-  }]
+    },
+    "roomsCount": 200
+  }]}

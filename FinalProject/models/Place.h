@@ -30,7 +30,7 @@ public:
     inline std::pair<double, double> getLocation() const {return this->location;};
 
     inline void setParentPlace(Place *parentPlace) {this->parentPlace = parentPlace;};
-    inline Place *getParentPlace(Place *parentPlace) {return this->parentPlace;};
+    inline Place *getParentPlace() const {return this->parentPlace;};
 
     inline bool operator ==(const Place &place) const {
         if (this->location == place.location && this->placeType == place.placeType)
