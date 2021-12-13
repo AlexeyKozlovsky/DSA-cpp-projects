@@ -3,9 +3,11 @@
 
 #include <QString>
 #include "Place.h"
+//#include "HotelManager.h"
 
 
 class Address {
+//    friend HotelManager;
 private:
     Place *city;
     Place *country;
@@ -19,6 +21,10 @@ public:
     Address(Place *city, QString streetName, QString house);
 
     QString getStringAddress();
+
+    inline QString getPlaceName() const {
+        return this->city->getName();
+    };
 
     // ------------OPERATORS---------------
     inline bool operator ==(const Address &address) const {

@@ -1,4 +1,4 @@
-[
+{"routes": [
   {
     "name": "Маршрут 1",
     "description": "",
@@ -26,9 +26,6 @@
         "name": "Париж",
         "description": "",
         "location": []
-      },
-      {
-        "name": "Кошeцы"
       }]
   }
-]
+]}

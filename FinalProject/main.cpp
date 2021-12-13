@@ -10,6 +10,7 @@
 #include "PlaceTypes.h"
 #include "PlaceManager.h"
 #include "HotelManager.h"
+#include "RouteManager.h"
 
 
 int main(int argc, char *argv[]) {
@@ -29,11 +30,13 @@ int main(int argc, char *argv[]) {
 
     PlaceManager *placeManager = PlaceManager::GetInstance();
     HotelManager *hotelManager = HotelManager::GetInstance();
+    RouteManager *routeManager = RouteManager::GetInstance();
     placeManager->parseFromJson("../resources/cities.json");
     hotelManager->parseFromJson("../resources/hotels.json");
+    routeManager->parseFromJson("../resources/routes.json");
 
 
-    Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");
+//    Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");
 //    qDebug() << foundPlace->getName();
 //    qDebug() << foundPlace->getDescription();
 //    qDebug() << foundPlace->getLocation();

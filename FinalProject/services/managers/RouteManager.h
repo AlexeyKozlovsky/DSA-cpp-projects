@@ -17,6 +17,7 @@ public:
     }
     Data* createRoute(QString name, QString description, std::vector<Place*> places);
     Data* createRoute(QString name, QString description, std::vector<Hotel*> hotels);
+    Data *createRoute(QString name, QString description, std::vector<std::pair<Place*, Hotel*>> routePoints);
 
     Data * getByName(QString name) override;
     void deleteByName(QString name) override;

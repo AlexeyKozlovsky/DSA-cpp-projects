@@ -114,3 +114,18 @@ Data *HotelManager::createHotel(QString name, QString description, Address *addr
     this->addResource(hotel);
     return hotel;
 }
+
+std::set<Data *> HotelManager::getHotelsByPlace(QString placeName) {
+    std::set<Data *> resultSet;
+    std::copy_if(this->resources.begin(), this->resources.end(),
+                 std::inserter(resultSet, resultSet.end()),
+                 [&](const Data *data) {
+
+        return ((Hotel *)data)->address->getPlaceName().toLower() == placeName.toLower();
+    });
+    return resultSet;
+}
+
+std::set<Data *> HotelManager::getHotelsByPlace(Place *place) {
+    return this->getHotelsByPlace(place->getName());
+}
