@@ -95,3 +95,8 @@ Data *UserManager::getByName(QString name) {
 void UserManager::deleteByName(QString name) {
 
 }
+
+UserManager::UserManager() {
+
+}
+

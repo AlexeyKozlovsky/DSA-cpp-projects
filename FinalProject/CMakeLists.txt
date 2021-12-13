@@ -11,6 +11,11 @@ include_directories(services)
 include_directories(ui)
 include_directories(services/managers)
 include_directories(models/enums)
+include_directories(ui/models)
+include_directories(ui/views)
+include_directories(ui/delegates)
+include_directories(ui/components)
+include_directories(ui/windows)
 
 
 find_package(Qt5 COMPONENTS
@@ -27,7 +32,8 @@ file(GLOB SOURCES
         "${CMAKE_SOURCE_DIR}/ui/models/*.cpp"
         "${CMAKE_SOURCE_DIR}/ui/delegates/*.cpp"
         "${CMAKE_SOURCE_DIR}/ui/views/*.cpp"
-        "${CMAKE_SOURCE_DIR}/services/builders/*.cpp"
+        "${CMAKE_SOURCE_DIR}/ui/windows/*.cpp"
+        "${CMAKE_SOURCE_DIR}/ui/dialogs/*.cpp"
         "${CMAKE_SOURCE_DIR}/services/managers/*.cpp"
         "${CMAKE_SOURCE_DIR}/models/*.h"
         "${CMAKE_SOURCE_DIR}/models/enums/*.h"
@@ -36,7 +42,8 @@ file(GLOB SOURCES
         "${CMAKE_SOURCE_DIR}/ui/models/*.h"
         "${CMAKE_SOURCE_DIR}/ui/delegates/*.h"
         "${CMAKE_SOURCE_DIR}/ui/views/*.h"
-        "${CMAKE_SOURCE_DIR}/services/builders/*.h"
+        "${CMAKE_SOURCE_DIR}/ui/windows/*.h"
+        "${CMAKE_SOURCE_DIR}/ui/dialogs/*.h"
         "${CMAKE_SOURCE_DIR}/services/managers/*.h"
         "main.cpp")
 

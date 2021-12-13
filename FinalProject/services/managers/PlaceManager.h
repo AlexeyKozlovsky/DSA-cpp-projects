@@ -12,8 +12,11 @@ class PlaceManager: public ResourceManager {
 private:
     static PlaceManager *placeManager_;
 
-    PlaceManager() = default;
+    PlaceManager();
 public:
+    PlaceManager(PlaceManager &other) = delete;
+    void operator=(const PlaceManager &) = delete;
+
     static PlaceManager *GetInstance() {
         if (PlaceManager::placeManager_ == nullptr)
             PlaceManager::placeManager_ = new PlaceManager();

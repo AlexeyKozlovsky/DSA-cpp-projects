@@ -106,3 +106,7 @@ void RouteManager::parseFromJson(QString jsonPath) {
         this->createRoute(name, description, placeHotelPairs);
     }
 }
+
+RouteManager::RouteManager() {
+
+}

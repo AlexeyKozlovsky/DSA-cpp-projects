@@ -179,3 +179,7 @@ std::set<Data *> PlaceManager::getCitiesByCountry(QString countryName) {
 std::set<Data *> PlaceManager::getCitiesByCountry(Data *country) {
     return this->getCitiesByCountry(((Place *)country)->name);
 }
+
+PlaceManager::PlaceManager() {
+
+}

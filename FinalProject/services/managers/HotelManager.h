@@ -10,13 +10,14 @@
 
 class HotelManager: public ResourceManager {
 private:
+    HotelManager();
+
     static HotelManager *hotelManager_;
 public:
-    static HotelManager *GetInstance() {
-        if (HotelManager::hotelManager_ == nullptr)
-            HotelManager::hotelManager_ = new HotelManager();
-        return HotelManager::hotelManager_;
-    }
+    HotelManager(HotelManager &other) = delete;
+    void operator=(const HotelManager &) = delete;
+
+    static HotelManager *GetInstance();
 
     Data *createHotel(QString name, QString description, Address *address, int roomsCount);
     Data *createHotel(QString name, QString description, Address *address, std::vector<Room> rooms);

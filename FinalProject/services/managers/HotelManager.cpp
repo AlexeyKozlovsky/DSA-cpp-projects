@@ -129,3 +129,13 @@ std::set<Data *> HotelManager::getHotelsByPlace(QString placeName) {
 std::set<Data *> HotelManager::getHotelsByPlace(Place *place) {
     return this->getHotelsByPlace(place->getName());
 }
+
+HotelManager *HotelManager::GetInstance() {
+    if (HotelManager::hotelManager_ == nullptr)
+        HotelManager::hotelManager_ = new HotelManager();
+    return HotelManager::hotelManager_;
+}
+
+HotelManager::HotelManager() {
+
+}

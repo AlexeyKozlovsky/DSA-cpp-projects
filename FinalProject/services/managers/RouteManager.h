@@ -9,7 +9,12 @@
 class RouteManager: public ResourceManager {
 private:
     static RouteManager *routeManager_;
+
+    RouteManager();
 public:
+    RouteManager(RouteManager &other) = delete;
+    void operator=(const RouteManager &) = delete;
+
     static RouteManager *GetInstance() {
         if (RouteManager::routeManager_ == nullptr)
             RouteManager::routeManager_ = new RouteManager();

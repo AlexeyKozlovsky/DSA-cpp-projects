@@ -2,6 +2,7 @@
 #define FINALPROJECT_RESOURCEMANAGER_H
 
 #include <set>
+#include <vector>
 #include <QString>
 
 #include "Data.h"
@@ -16,7 +17,7 @@ public:
     virtual void parseFromJson(QString jsonPath) = 0;
     void addResource(Data *resource);
     void removeResource(Data *resource);
-    std::set<Data*> getResources();
+    std::set<Data*> getResources() const;
 
     virtual Data* getByName(QString name) = 0;
     virtual void deleteByName(QString name) = 0;

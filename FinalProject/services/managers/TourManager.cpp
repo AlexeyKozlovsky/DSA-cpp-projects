@@ -73,3 +73,7 @@ void TourManager::parseFromJson(QString jsonPath) {
     }
 
 }
+
+TourManager::TourManager() {
+
+}

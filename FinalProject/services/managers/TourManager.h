@@ -10,8 +10,11 @@
 class TourManager: public ResourceManager {
 private:
     static TourManager *tourManager_;
-    TourManager() = default;
+    TourManager();
 public:
+    TourManager(TourManager &other) = delete;
+    void operator=(const TourManager &) = delete;
+
     static TourManager *GetInstance() {
         if (TourManager::tourManager_ == nullptr)
             TourManager::tourManager_ = new TourManager();

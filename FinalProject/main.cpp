@@ -15,12 +15,15 @@
 #include "TourManager.h"
 #include "UserManager.h"
 
+#include "HotelsTableModel.h"
+#include "HotelsTableView.h"
+
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    QPushButton button("Hello world!", nullptr);
-    button.resize(200, 100);
-    button.show();
+//    QPushButton button("Hello world!", nullptr);
+//    button.resize(200, 100);
+//    button.show();
 
 //    UserManager *userManager = (UserManager *) UserManager::GetInstance();
 //    auto *user1 = userManager->createUser("Alex", "Keks", "efdsfd@agd.com", "12321sdgfdsf3");
@@ -43,6 +46,8 @@ int main(int argc, char *argv[]) {
     userManager->parseFromJson("../resources/users.json");
 
 
+
+
 //    Place *foundPlace = (Place *)placeManager->getPlaceByName("Бакыханов");
 //    qDebug() << foundPlace->getName();
 //    qDebug() << foundPlace->getDescription();
@@ -51,5 +56,12 @@ int main(int argc, char *argv[]) {
 //    std::set<Data *> radiusedPlaces = placeManager->getPlacesByLocation(10000, 10000, 0.1);
 //    std::set<Data *> russianCities = placeManager->getCitiesByCountry("Российская Федерация");
 
+
+
+    HotelsTableView view;
+    HotelsTableModel *model = new HotelsTableModel;
+    view.setModel(model);
+
+    view.show();
     return QApplication::exec();
 }

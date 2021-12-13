@@ -12,8 +12,11 @@ class UserManager: public ResourceManager {
 private:
     static UserManager *userManager_;
 
-    UserManager() = default;
+    UserManager();
 public:
+    UserManager(UserManager &other) = delete;
+    void operator=(const UserManager &) = delete;
+
     void parseFromJson(QString jsonPath) override;
     Data * getByName(QString name) override;
     void deleteByName(QString name) override;
