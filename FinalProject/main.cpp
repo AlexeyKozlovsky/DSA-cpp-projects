@@ -16,7 +16,11 @@
 #include "UserManager.h"
 
 #include "HotelsTableModel.h"
-#include "HotelsTableView.h"
+#include "PlacesTableModel.h"
+#include "UsersTableModel.h"
+#include "BaseTableView.h"
+
+#include "TabBarPage.h"
 
 
 int main(int argc, char *argv[]) {
@@ -58,10 +62,24 @@ int main(int argc, char *argv[]) {
 
 
 
-    HotelsTableView view;
-    HotelsTableModel *model = new HotelsTableModel;
-    view.setModel(model);
+//    BaseTableView hotelsView("Hotels");
+//    BaseTableView placesView("Places");
+//    BaseTableView usersView("Users");
+//
+//    HotelsTableModel *hotelsModel = new HotelsTableModel;
+//    hotelsView.setModel(hotelsModel);
+//
+//    PlacesTableModel *placesModel = new PlacesTableModel;
+//    placesView.setModel(placesModel);
+//
+//    UsersTableModel *usersModel = new UsersTableModel;
+//    usersView.setModel(usersModel);
+//
+//    hotelsView.show();
+//    placesView.show();
+//    usersView.show();
 
-    view.show();
+    TabBarPage page;
+    page.show();
     return QApplication::exec();
 }

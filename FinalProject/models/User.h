@@ -4,10 +4,12 @@
 #include <QString>
 #include "Address.h"
 #include "UserManager.h"
+#include "UsersTableModel.h"
 
 
 class User: public Data {
     friend UserManager;
+    friend UsersTableModel;
 protected:
     QString firstName;
     QString secondName;
@@ -38,6 +40,13 @@ public:
     bool updateName(QString fistName, QString secondName, QString patronymic);
 
     int getAge();
+
+    inline QString getFirstName() const {return this->firstName;};
+    inline QString getSecondName() const {return this->secondName;};
+    inline QString getPatronymic() const {return this->patronymic;};
+    inline QString getEmail() const {return this->email;};
+    inline QString getPhone() const {return this->phone;};
+    inline QString getStringAddress() const {return this->address->getStringAddress();};
 
     // --------------------OPERATORS--------------------
     inline bool operator ==(const User &user) const {

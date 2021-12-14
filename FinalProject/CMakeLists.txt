@@ -34,6 +34,7 @@ file(GLOB SOURCES
         "${CMAKE_SOURCE_DIR}/ui/views/*.cpp"
         "${CMAKE_SOURCE_DIR}/ui/windows/*.cpp"
         "${CMAKE_SOURCE_DIR}/ui/dialogs/*.cpp"
+        "${CMAKE_SOURCE_DIR}/ui/components/*.cpp"
         "${CMAKE_SOURCE_DIR}/services/managers/*.cpp"
         "${CMAKE_SOURCE_DIR}/models/*.h"
         "${CMAKE_SOURCE_DIR}/models/enums/*.h"
@@ -44,6 +45,7 @@ file(GLOB SOURCES
         "${CMAKE_SOURCE_DIR}/ui/views/*.h"
         "${CMAKE_SOURCE_DIR}/ui/windows/*.h"
         "${CMAKE_SOURCE_DIR}/ui/dialogs/*.h"
+        "${CMAKE_SOURCE_DIR}/ui/components/*.h"
         "${CMAKE_SOURCE_DIR}/services/managers/*.h"
         "main.cpp")
 

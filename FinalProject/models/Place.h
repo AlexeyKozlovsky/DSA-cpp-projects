@@ -29,6 +29,9 @@ public:
     inline PlaceTypes getPlaceType() const {return this->placeType;};
     inline std::pair<double, double> getLocation() const {return this->location;};
 
+    inline void setName(QString name) {this->name = name;};
+    inline void setDescription(QString description) {this->description = description;};
+
     inline void setParentPlace(Place *parentPlace) {this->parentPlace = parentPlace;};
     inline Place *getParentPlace() const {return this->parentPlace;};
 
