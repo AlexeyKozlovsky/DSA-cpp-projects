@@ -1,10 +1,10 @@
 #ifndef FINALPROJECT_ADDRESSCREATORWIDGET_H
 #define FINALPROJECT_ADDRESSCREATORWIDGET_H
 
-#include <QDialog>
+#include <QWidget>
 
 
-class AddressCreatorWidget: public QDialog {
+class AddressCreatorWidget: public QWidget {
     Q_OBJECT
 private:
     void initUI();

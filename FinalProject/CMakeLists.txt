@@ -16,6 +16,7 @@ include_directories(ui/views)
 include_directories(ui/delegates)
 include_directories(ui/components)
 include_directories(ui/windows)
+include_directories(ui/dialogs)
 
 
 find_package(Qt5 COMPONENTS

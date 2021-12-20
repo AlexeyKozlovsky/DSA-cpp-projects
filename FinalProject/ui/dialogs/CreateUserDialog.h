@@ -1,13 +1,15 @@
-//
-// Created by alexeykozlovsky on 13.12.2021.
-//
-
 #ifndef FINALPROJECT_CREATEUSERDIALOG_H
 #define FINALPROJECT_CREATEUSERDIALOG_H
 
+#include <QDialog>
 
-class CreateUserDialog {
 
+class CreateUserDialog: public QDialog {
+    Q_OBJECT
+private:
+    void initUI();
+public:
+    CreateUserDialog(QWidget *parent = nullptr);
 };
 
 

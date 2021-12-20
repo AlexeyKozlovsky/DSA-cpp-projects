@@ -8,7 +8,7 @@
 #include "AddressCreatorWidget.h"
 
 
-AddressCreatorWidget::AddressCreatorWidget(QWidget *parent): QDialog(parent) {
+AddressCreatorWidget::AddressCreatorWidget(QWidget *parent): QWidget(parent) {
     this->initUI();
 }
 
