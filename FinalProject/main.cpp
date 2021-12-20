@@ -25,6 +25,8 @@
 
 #include "PlacesFilterWidget.h"
 #include "UsersFilterWidget.h"
+#include "AddressCreatorWidget.h"
+#include "ui/dialogs/CreateHotelDialog.h"
 
 
 int main(int argc, char *argv[]) {
@@ -89,7 +91,14 @@ int main(int argc, char *argv[]) {
 //    PlacesFilterWidget *widget = new PlacesFilterWidget;
 //    widget->show();
 
-    UsersFilterWidget *widget = new UsersFilterWidget;
-    widget->show();
+//    UsersFilterWidget *widget = new UsersFilterWidget;
+//    widget->show();
+
+//    AddressCreatorWidget addressCreatorWidget;
+//    addressCreatorWidget.show();
+
+    CreateHotelDialog createHotelDialog;
+    createHotelDialog.show();
+
     return QApplication::exec();
 }
