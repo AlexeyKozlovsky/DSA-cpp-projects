@@ -13,8 +13,6 @@ private:
     void initUI();
 public:
     TabBarPage(QWidget *parent = nullptr);
-
-
 };
 
 

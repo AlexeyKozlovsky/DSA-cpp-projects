@@ -8,8 +8,10 @@ Hotel::Hotel(QString name, QString description, Address *address, int roomsCount
     this->description = description;
     this->address = address;
 
-    for (int i = 0; i < roomsCount; i++)
+    for (int i = 0; i < roomsCount; i++) {
         Room room(RoomTypes::DOUBLE, 200);
+        this->rooms.push_back(room);
+    }
 }
 
 Hotel::Hotel(QString name, QString description, Address *address, std::vector<Room> rooms) {

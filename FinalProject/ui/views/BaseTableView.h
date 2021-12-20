@@ -5,20 +5,24 @@
 #include <QString>
 #include <QWidget>
 #include <QTableView>
+#include <QHBoxLayout>
 #include <QAbstractTableModel>
 
 
 class BaseTableView: public QWidget {
     Q_OBJECT
-private:
+protected:
     QString name;
     QTableView *tableView;
 
-    void initUI();
+    virtual void initUI();
+
+    QHBoxLayout *mainLayout;
+
 public:
     BaseTableView(QString name, QWidget *parent = nullptr);
 
-    void setModel(QAbstractTableModel *model);
+    virtual void setModel(QAbstractItemModel *model);
 };
 
 

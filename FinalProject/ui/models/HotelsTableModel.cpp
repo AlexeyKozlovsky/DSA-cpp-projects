@@ -17,7 +17,7 @@ HotelsTableModel::HotelsTableModel(QObject *parent) : BaseTableModel(parent) {
         currentHotelMap["name"] = hotel->getName();
         currentHotelMap["description"] = hotel->getDescription();
         currentHotelMap["placeName"] = hotel->getAddress()->getPlaceName();
-        currentHotelMap["roomsCount"] = hotel->getRoomsCount();
+        currentHotelMap["roomsCount"] = QString::number(hotel->getRoomsCount());
         this->resources.push_back(currentHotelMap);
         this->resourcePointers.push_back(hotel);
     }
@@ -82,4 +82,16 @@ bool HotelsTableModel::setData(const QModelIndex &index, const QVariant &value, 
     }
 
     return true;
+}
+
+void HotelsTableModel::sort(int column, Qt::SortOrder order) {
+    std::sort(this->resources.begin(), this->resources.end(), [&](const QMap<QString, QString> &lMap, const QMap<QString, QString> &rMap) {
+        switch (column) {
+            case 0:
+                return lMap["name"] <= rMap["name"];
+            case 1:
+                return lMap["description"] <= rMap["description"];
+        }
+    });
+    QAbstractItemModel::sort(column, order);
 }

@@ -1,11 +1,13 @@
 #include <QObject>
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QSortFilterProxyModel>
 
 #include "TabBarPage.h"
 #include "UsersTableModel.h"
 #include "PlacesTableModel.h"
 #include "HotelsTableModel.h"
+#include "HotelTableView.h"
 #include "BaseTableView.h"
 
 
@@ -18,16 +20,24 @@ void TabBarPage::initUI() {
 
     this->tabWidget = new QTabWidget;
 
-    UsersTableModel *users = new UsersTableModel;
-    PlacesTableModel *places = new PlacesTableModel;
-    HotelsTableModel *hotels = new HotelsTableModel;
+    UsersTableModel *users = new UsersTableModel(this);
+    PlacesTableModel *places = new PlacesTableModel(this);
+    HotelsTableModel *hotels = new HotelsTableModel(this);
+
+    QSortFilterProxyModel *usersProxy = new QSortFilterProxyModel(this);
+    QSortFilterProxyModel *placesProxy = new QSortFilterProxyModel(this);
+    QSortFilterProxyModel *hotelsProxy = new QSortFilterProxyModel(this);
+
+    usersProxy->setSourceModel(users);
+    placesProxy->setSourceModel(places);
+    hotelsProxy->setSourceModel(hotels);
 
     BaseTableView *usersView = new BaseTableView("Пользователи");
     BaseTableView *placesView = new BaseTableView("Места");
-    BaseTableView *hotelsView = new BaseTableView("Отели");
+    HotelTableView *hotelsView = new HotelTableView;
 
-    usersView->setModel(users);
-    placesView->setModel(places);
+    usersView->setModel(usersProxy);
+    placesView->setModel(placesProxy);
     hotelsView->setModel(hotels);
 
     tabWidget->addTab(usersView, "Пользователи");

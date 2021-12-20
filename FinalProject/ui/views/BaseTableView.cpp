@@ -5,6 +5,7 @@
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QTableView>
+#include <QSortFilterProxyModel>
 
 #include "BaseTableView.h"
 
@@ -17,23 +18,26 @@ BaseTableView::BaseTableView(QString name, QWidget *parent) {
 void BaseTableView::initUI() {
     this->setWindowTitle(this->name);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    this->mainLayout = new QHBoxLayout;
+    QVBoxLayout *tableLayout = new QVBoxLayout;
     QHBoxLayout *btnLayout = new QHBoxLayout;
 
     this->tableView = new QTableView;
+    this->tableView->setSortingEnabled(true);
 
     QPushButton *addButton = new QPushButton("Добавить");
     QPushButton *deleteButton = new QPushButton("Удалить");
 
-    mainLayout->addWidget(this->tableView);
-    mainLayout->addLayout(btnLayout);
+    tableLayout->addWidget(this->tableView);
+    tableLayout->addLayout(btnLayout);
 
     btnLayout->addWidget(addButton);
     btnLayout->addWidget(deleteButton);
 
-    this->setLayout(mainLayout);
+    this->mainLayout->addLayout(tableLayout);
+    this->setLayout(this->mainLayout);
 }
 
-void BaseTableView::setModel(QAbstractTableModel *model) {
+void BaseTableView::setModel(QAbstractItemModel *model) {
     this->tableView->setModel(model);
 }

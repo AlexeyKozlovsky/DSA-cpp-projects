@@ -31,6 +31,8 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+
+    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 //
 //    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
 //    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;

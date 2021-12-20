@@ -21,6 +21,7 @@
 #include "BaseTableView.h"
 
 #include "TabBarPage.h"
+#include "HotelsFilterWidget.h"
 
 
 int main(int argc, char *argv[]) {
