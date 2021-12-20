@@ -23,6 +23,9 @@
 #include "TabBarPage.h"
 #include "HotelsFilterWidget.h"
 
+#include "PlacesFilterWidget.h"
+#include "UsersFilterWidget.h"
+
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
@@ -80,7 +83,13 @@ int main(int argc, char *argv[]) {
 //    placesView.show();
 //    usersView.show();
 
-    TabBarPage page;
-    page.show();
+//    TabBarPage page;
+//    page.show();
+//
+//    PlacesFilterWidget *widget = new PlacesFilterWidget;
+//    widget->show();
+
+    UsersFilterWidget *widget = new UsersFilterWidget;
+    widget->show();
     return QApplication::exec();
 }
