@@ -38,6 +38,7 @@ int RoutesTreeModel::rowCount(const QModelIndex &parent) const {
 }
 
 int RoutesTreeModel::columnCount(const QModelIndex &parent) const {
+    return 2;
     if (parent.isValid())
         return static_cast<TreeItem *>(parent.internalPointer())->columnCount();
     return this->rootItem->columnCount();
@@ -82,11 +83,11 @@ QVariant RoutesTreeModel::data(const QModelIndex &index, int role) const {
 }
 
 QVariant RoutesTreeModel::headerData(int section, Qt::Orientation orientation, int role) const {
-//    if (orientation != Qt::Horizontal || role != Qt::DisplayRole) return QVariant();
-//    switch (section) {
-//        case 1: return "Свойство";
-//        case 2: return "Значение";
-//    }
+    if (orientation != Qt::Horizontal || role != Qt::DisplayRole) return QVariant();
+    switch (section) {
+        case 0: return "Название";
+        case 1: return "Описание";
+    }
 
     return QAbstractItemModel::headerData(section, orientation, role);
 }

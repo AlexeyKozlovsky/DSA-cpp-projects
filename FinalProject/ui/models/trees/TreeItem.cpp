@@ -60,7 +60,7 @@ int TreeItem::columnCount() const {
 }
 
 QVariant TreeItem::data(int column) const {
-    if (typeid(this->itemData) == typeid(Tour)) {
+    if (dynamic_cast<Tour*>(this->itemData)) {
         Tour *tour = (Tour *)this->itemData;
         switch (column) {
             case 0: return tour->getName();
@@ -68,7 +68,7 @@ QVariant TreeItem::data(int column) const {
             case 2: return tour->getStartDate();
             case 3: return tour->getPrice();
         }
-    } else if (typeid(this->itemData) == typeid(User)) {
+    } else if (dynamic_cast<User*>(this->itemData)) {
         User *user = (User *)this->itemData;
         switch (column) {
             case 0: return user->getFullName();
@@ -88,7 +88,7 @@ QVariant TreeItem::data(int column) const {
             case 1: return place->getDescription();
             case 2: return place->getPlaceType();
         }
-    } else if (typeid(this->itemData) == typeid(Hotel)) {
+    } else if (dynamic_cast<Hotel*>(this->itemData)) {
         Hotel *hotel = (Hotel *)this->itemData;
         switch (column) {
             case 0: return hotel->getName();
