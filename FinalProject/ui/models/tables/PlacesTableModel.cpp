@@ -3,7 +3,6 @@
 
 #include <QString>
 #include <QMap>
-#include <QList>
 
 #include "PlacesTableModel.h"
 #include "PlaceTypes.h"
@@ -43,14 +42,10 @@ int PlacesTableModel::columnCount(const QModelIndex &index) const {
 QVariant PlacesTableModel::data(const QModelIndex &index, int role) const {
     if (role == Qt::DisplayRole) {
         switch (index.column()) {
-            case 0:
-                return this->resources[index.row()]["name"];
-            case 1:
-                return this->resources[index.row()]["description"];
-            case 2:
-                return this->resources[index.row()]["location"];
-            case 3:
-                return this->resources[index.row()]["type"];
+            case 0: return this->resources[index.row()]["name"];
+            case 1: return this->resources[index.row()]["description"];
+            case 2: return this->resources[index.row()]["location"];
+            case 3: return this->resources[index.row()]["type"];
         }
     }
     return QVariant();
@@ -59,14 +54,10 @@ QVariant PlacesTableModel::data(const QModelIndex &index, int role) const {
 QVariant PlacesTableModel::headerData(int section, Qt::Orientation orientation, int role) const {
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
         switch (section) {
-            case 0:
-                return "Название";
-            case 1:
-                return "Описание";
-            case 2:
-                return "Геолокация";
-            case 3:
-                return "Тип";
+            case 0: return "Название";
+            case 1: return "Описание";
+            case 2: return "Геолокация";
+            case 3: return "Тип";
         }
     }
     return QAbstractItemModel::headerData(section, orientation, role);

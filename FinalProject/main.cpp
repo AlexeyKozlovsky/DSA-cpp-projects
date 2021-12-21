@@ -2,6 +2,7 @@
 
 #include <QApplication>
 #include <QPushButton>
+#include <QTreeView>
 #include <QDebug>
 
 #include "Data.h"
@@ -28,6 +29,7 @@
 #include "AddressCreatorWidget.h"
 #include "CreateHotelDialog.h"
 #include "CreateUserDialog.h"
+#include "RoutesTreeModel.h"
 
 
 int main(int argc, char *argv[]) {
@@ -101,8 +103,12 @@ int main(int argc, char *argv[]) {
 //    CreateHotelDialog createHotelDialog;
 //    createHotelDialog.show();
 
-    CreateUserDialog createUserDialog;
-    createUserDialog.show();
+//    CreateUserDialog createUserDialog;
+//    createUserDialog.show();
 
+    RoutesTreeModel *model = new RoutesTreeModel;
+    QTreeView view;
+    view.setModel(model);
+    view.show();
     return QApplication::exec();
 }

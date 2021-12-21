@@ -47,6 +47,9 @@ public:
     inline QString getEmail() const {return this->email;};
     inline QString getPhone() const {return this->phone;};
     inline QString getStringAddress() const {return this->address->getStringAddress();};
+    inline QString getFullName() const {
+        return this->secondName + " " + this->firstName + " " + this->patronymic;
+    };
 
     // --------------------OPERATORS--------------------
     inline bool operator ==(const User &user) const {

@@ -30,6 +30,10 @@ private:
          std::vector<Hotel*> hotels, int extraPrice);
 
 public:
+    inline QString getName() const {return this->name;};
+    inline QString getDescription() const {return this->description;};
+    inline QDate getStartDate() const {return this->startDate;};
+
     inline double getPrice() const {
         return this->price;
     };
