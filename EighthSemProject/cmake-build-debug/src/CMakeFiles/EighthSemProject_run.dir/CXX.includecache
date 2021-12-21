@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/WF.h
+string
+-
+
+../include/WFOpt.h
+string
+-
+
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/EighthSemProject/src/main.cpp
+iostream
+-
+WF.h
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/EighthSemProject/src/WF.h
+WFOpt.h
+/home/alexeykozlovsky/Documents/Studies/DSA/CppProjects/DSA-cpp-projects/EighthSemProject/src/WFOpt.h
+

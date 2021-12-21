@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEighthSemProject_lib.a CMakeFiles/EighthSemProject_lib.dir/WF.cpp.o CMakeFiles/EighthSemProject_lib.dir/WFOpt.cpp.o CMakeFiles/EighthSemProject_lib.dir/main.cpp.o
+/usr/bin/ranlib libEighthSemProject_lib.a

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/EighthSemProject_run.dir/WF.cpp.o CMakeFiles/EighthSemProject_run.dir/WFOpt.cpp.o CMakeFiles/EighthSemProject_run.dir/main.cpp.o -o EighthSemProject_run 
